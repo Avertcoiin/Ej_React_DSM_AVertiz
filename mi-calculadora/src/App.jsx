@@ -1,35 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import React, { useState } from 'react';
+import './App.css';
+import Boton from './components/Boton/Boton';
+import ElementoInput from './components/input/ElementoInput';
+import Resultado from './components/resultado/Resultado';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Estados para los valores A, B y la operación activa
+  const [a, setA] = useState(0);
+  const [b, setB] = useState(0);
+  const [operacionActiva, setOperacionActiva] = useState(null);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container mt-5">
+      <h1>Calculadora React</h1>
+
+      {/* Entradas para los valores A y B */}
+      <div className="row">
+        <div className="col-6">
+          <ElementoInput
+            label="A"
+            value={a}
+            onChange={(e) => setA(parseFloat(e.target.value))}
+          />
+        </div>
+        <div className="col-6">
+          <ElementoInput
+            label="B"
+            value={b}
+            onChange={(e) => setB(parseFloat(e.target.value))}
+          />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      {/* Botones de operaciones */}
+      <div className="mt-3">
+        <Boton
+          label="+"
+          isActive={operacionActiva === "+"}
+          onClick={() => setOperacionActiva("+")}
+        />
+        <Boton
+          label="-"
+          isActive={operacionActiva === "-"}
+          onClick={() => setOperacionActiva("-")}
+        />
+        <Boton
+          label="×"
+          isActive={operacionActiva === "×"}
+          onClick={() => setOperacionActiva("×")}
+        />
+        <Boton
+          label="÷"
+          isActive={operacionActiva === "÷"}
+          onClick={() => setOperacionActiva("÷")}
+        />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      {/* Componente Resultado: pasa A, B y la operación activa */}
+      <Resultado a={a} b={b} operacion={operacionActiva} />
+    </div>
+  );
 }
 
-export default App
+export default App;
