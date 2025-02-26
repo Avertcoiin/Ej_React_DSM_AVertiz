@@ -38,10 +38,8 @@ function App() {
   };
 
   return (
-    <div className="container mt-5">
-      <h1 className="mb-5">Calculadora</h1>
 
-      <div className="recuadro p-4" style={{ backgroundColor: '#c1d0e0', borderRadius: '10px' }}>
+      <div className=" container mt-5recuadro p-4" style={{ backgroundColor: '#c1d0e0', borderRadius: '10px' }}>
         <div className="calculadora-contenido" style={{ backgroundColor: 'white', borderRadius: '10px', padding: '20px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', minHeight: '150px' }}>
           <div className="row">
             <div className="col-6">
@@ -127,7 +125,6 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
