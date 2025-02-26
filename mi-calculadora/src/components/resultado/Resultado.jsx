@@ -1,11 +1,10 @@
-// src/components/Resultado/Resultado.jsx
-
 import React from 'react';
+import './Resultado.css';
 
 function Resultado({ a, b, operacion }) {
-  let resultado = null;
+  if (a === '' || b === '' || operacion === null) return null; // Si A, B o operación están vacíos, no mostrar nada.
 
-  // Realiza el cálculo dependiendo de la operación
+  let resultado;
   switch (operacion) {
     case "+":
       resultado = a + b;
@@ -20,14 +19,19 @@ function Resultado({ a, b, operacion }) {
       resultado = b !== 0 ? a / b : "Error";
       break;
     default:
-      resultado = null;
+      return null;
   }
 
   return (
-    <div className="mt-3">
-      <h3>Resultado: {resultado !== null ? resultado : 'Esperando operación'}</h3>
+    <div className="resultado-texto">
+      {a && <span className="valor">{a}</span>}
+      {operacion && <span className="operacion">{operacion}</span>}
+      {b && <span className="valor">{b}</span>}
+      <span className="igual">=</span>
+      {resultado !== undefined && <span className="resultado">{resultado}</span>}
     </div>
   );
 }
 
 export default Resultado;
+

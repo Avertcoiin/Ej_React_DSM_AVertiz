@@ -1,0 +1,13 @@
+.resultado-texto {
+    color: #525151bf; /* Gris oscuro para el resultado */
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    gap: 10px; /* Espacio entre elementos */
+  }
+  
+  .valor, .operacion, .igual, .resultado {
+    display: inline-block;
+    padding: 5px 8px;
+  }
+  
