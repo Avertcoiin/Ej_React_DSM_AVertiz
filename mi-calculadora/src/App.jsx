@@ -4,6 +4,7 @@ import './App.css';
 import Boton from './components/Boton/Boton';
 import ElementoInput from './components/input/ElementoInput';
 import Resultado from './components/resultado/Resultado';
+import BotonBorrado from './components/Boton/BotonBorrado';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
           <Boton label="-" isActive={operacionActiva === "-"} onClick={() => setOperacionActiva("-")} />
           <Boton label="×" isActive={operacionActiva === "×"} onClick={() => setOperacionActiva("×")} />
           <Boton label="÷" isActive={operacionActiva === "÷"} onClick={() => setOperacionActiva("÷")} />
+
+          {/* Botón C para borrar */}
+          <BotonBorrado setA={setA} setB={setB} setOperacionActiva={setOperacionActiva} />
         </div>
       </div>
     </div>
