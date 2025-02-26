@@ -1,1 +1,11 @@
 /* src/components/Boton/Boton.css */
+
+/* Hacer que los botones ocupen el 90% del espacio de su celda */
+.btn {
+    width: 90%;          /* Ocupa el 90% del ancho de la celda */
+    height: 90%;         /* Ocupa el 90% de la altura de la celda */
+    display: block;      /* Hace que el botón sea un bloque */
+    margin: 0 auto;      /* Centra el botón dentro de la celda */
+    text-align: center;  /* Centra el texto dentro del botón */
+  }
+  

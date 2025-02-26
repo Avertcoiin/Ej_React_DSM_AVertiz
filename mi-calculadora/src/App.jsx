@@ -43,15 +43,64 @@ function App() {
           </div>
         </div>
 
-        {/* Botones */}
+        {/* Contenedor de los botones */}
         <div className="mt-3">
-          <Boton label="+" isActive={operacionActiva === "+"} onClick={() => setOperacionActiva("+")} />
-          <Boton label="-" isActive={operacionActiva === "-"} onClick={() => setOperacionActiva("-")} />
-          <Boton label="×" isActive={operacionActiva === "×"} onClick={() => setOperacionActiva("×")} />
-          <Boton label="÷" isActive={operacionActiva === "÷"} onClick={() => setOperacionActiva("÷")} />
-
-          {/* Botón C para borrar */}
-          <BotonBorrado setA={setA} setB={setB} setOperacionActiva={setOperacionActiva} />
+          <div className="row mb-2">
+            <div className="col">
+              <Boton label="7" isActive={false} onClick={() => {}} className="btn btn-light" />
+            </div>
+            <div className="col">
+              <Boton label="8" isActive={false} onClick={() => {}} className="btn btn-light" />
+            </div>
+            <div className="col">
+              <Boton label="9" isActive={false} onClick={() => {}} className="btn btn-light" />
+            </div>
+            <div className="col">
+              <Boton label="÷" isActive={operacionActiva === "÷"} onClick={() => setOperacionActiva("÷")} />
+            </div>
+          </div>
+          <div className="row mb-2">
+            <div className="col">
+              <Boton label="4" isActive={false} onClick={() => {}} className="btn btn-light" />
+            </div>
+            <div className="col">
+              <Boton label="5" isActive={false} onClick={() => {}} className="btn btn-light" />
+            </div>
+            <div className="col">
+              <Boton label="6" isActive={false} onClick={() => {}} className="btn btn-light" />
+            </div>
+            <div className="col">
+              <Boton label="×" isActive={operacionActiva === "×"} onClick={() => setOperacionActiva("×")} />
+            </div>
+          </div>
+          <div className="row mb-2">
+            <div className="col">
+              <Boton label="1" isActive={false} onClick={() => {}} className="btn btn-light" />
+            </div>
+            <div className="col">
+              <Boton label="2" isActive={false} onClick={() => {}} className="btn btn-light" />
+            </div>
+            <div className="col">
+              <Boton label="3" isActive={false} onClick={() => {}} className="btn btn-light" />
+            </div>
+            <div className="col">
+              <Boton label="-" isActive={operacionActiva === "-"} onClick={() => setOperacionActiva("-")} />
+            </div>
+          </div>
+          <div className="row mb-2">
+            <div className="col">
+              <BotonBorrado setA={setA} setB={setB} setOperacionActiva={setOperacionActiva} />
+            </div>
+            <div className="col">
+              <Boton label="0" isActive={false} onClick={() => {}} className="btn btn-light" />
+            </div>
+            <div className="col">
+              <Boton label="." isActive={false} onClick={() => {}} className="btn btn-light" />
+            </div>
+            <div className="col">
+              <Boton label="+" isActive={operacionActiva === "+"} onClick={() => setOperacionActiva("+")} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
