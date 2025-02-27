@@ -52,7 +52,7 @@ La calculadora también es funcional con el teclado de tu ordeador. Los usuarios
 
 - La calculadora realiza operaciones básicas como suma, resta, multiplicación y división.
 - Los valores se introducen por dos campos de entrada: **A** y **B**. También puedes seleccionar una operación y obtener el resultado una vez se hayan introducido los valores de **A** y **B**.
-- Puedes alternar entre los campos **A** y **B** simplemente haciendo clic en ellos o usando el teclado.
+- Puedes alternar entre los campos **A** y **B** simplemente haciendo clic en ellos.
 
 ---
 
