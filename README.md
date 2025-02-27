@@ -15,20 +15,19 @@ Para correr el proyecto necesitas tener instalados los siguientes programas:
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/Avertcoiin/Ej_React_DSM_AVertiz.git ```
+   git clone https://github.com/Avertcoiin/Ej_React_DSM_AVertiz.git
    
 2. Navega al directorio del proyecto:
    ```bash
-   cd Ej_React_DSM_AVertiz ```
+   cd Ej_React_DSM_AVertiz
 
 3. Instala las dependencias:
-  ```bash
-  npm install ```
+   ```bash
+  npm install
 
 ### Ejecutar el proyecto
-```bash
-  npm run dev  ```
-
+    ```bash
+    npm run dev
 
 ### Uso de la calculadora
 
