@@ -29,7 +29,8 @@ Para correr el proyecto necesitas tener instalados los siguientes programas:
   ```bash
   npm run dev
 
-## 🧮 Uso de la calculadora
+
+### 🧮 Uso de la calculadora
 
 ### Interacción con los botones
 
