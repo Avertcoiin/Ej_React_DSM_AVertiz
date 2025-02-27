@@ -2,11 +2,12 @@
 import React from 'react';
 import './Boton.css';  // Importamos el archivo de estilos
 
-function BotonBorrado({ setA, setB, setOperacionActiva }) {
+function BotonBorrado({ setA, setB, setOperacionActiva, setInputActivo }) {
   const resetCalculadora = () => {
     setA('');
     setB('');
     setOperacionActiva(null);
+    setInputActivo('A');
   };
 
   return (

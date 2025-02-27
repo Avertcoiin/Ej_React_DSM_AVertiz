@@ -37,6 +37,17 @@ function App() {
     setInputActivo(input); // Marca el campo como activo
   };
 
+  // Función para manejar clics en los botones de operación. Si está en A y pulsamos, pasa a B
+  const handleOperationClick = (operation) => {
+    setOperacionActiva(operation);
+
+    // Si el input activo es A, cambiar a B
+    if (inputActivo === 'A') {
+      setInputActivo('B');
+    }
+  };
+
+
   return (
 
       <div className=" container mt-5recuadro p-4" style={{ backgroundColor: '#c1d0e0', borderRadius: '10px' }}>
@@ -78,7 +89,7 @@ function App() {
               <Boton label="9" isActive={false} onClick={() => handleNumberClick("9")} className="btn btn-light" />
             </div>
             <div className="col">
-              <Boton label="÷" isActive={operacionActiva === "÷"} onClick={() => setOperacionActiva("÷")} />
+              <Boton label="÷" isActive={operacionActiva === "÷"} onClick={() => handleOperationClick("÷")} />
             </div>
           </div>
           <div className="row mb-2">
@@ -92,7 +103,7 @@ function App() {
               <Boton label="6" isActive={false} onClick={() => handleNumberClick("6")} className="btn btn-light" />
             </div>
             <div className="col">
-              <Boton label="×" isActive={operacionActiva === "×"} onClick={() => setOperacionActiva("×")} />
+              <Boton label="×" isActive={operacionActiva === "×"} onClick={() => handleOperationClick("×")} />
             </div>
           </div>
           <div className="row mb-2">
@@ -106,12 +117,12 @@ function App() {
               <Boton label="3" isActive={false} onClick={() => handleNumberClick("3")} className="btn btn-light" />
             </div>
             <div className="col">
-              <Boton label="-" isActive={operacionActiva === "-"} onClick={() => setOperacionActiva("-")} />
+              <Boton label="-" isActive={operacionActiva === "-"} onClick={() => handleOperationClick("-")} />
             </div>
           </div>
           <div className="row mb-2">
             <div className="col">
-              <BotonBorrado setA={setA} setB={setB} setOperacionActiva={setOperacionActiva} />
+              <BotonBorrado setA={setA} setB={setB} setOperacionActiva={setOperacionActiva} setInputActivo={setInputActivo}/>
             </div>
             <div className="col">
               <Boton label="0" isActive={false} onClick={() => handleNumberClick("0")} className="btn btn-light" />
@@ -120,7 +131,7 @@ function App() {
               <Boton label="." isActive={false} onClick={() => handleNumberClick(".")} className="btn btn-light" />
             </div>
             <div className="col">
-              <Boton label="+" isActive={operacionActiva === "+"} onClick={() => setOperacionActiva("+")} />
+              <Boton label="+" isActive={operacionActiva === "+"} onClick={() => handleOperationClick("+")} />
             </div>
           </div>
         </div>
