@@ -26,8 +26,8 @@ Para correr el proyecto necesitas tener instalados los siguientes programas:
     npm install
 
 ### Ejecutar el proyecto
-    ```bash
-    npm run dev
+      ```bash
+      npm run dev
 
 ### Uso de la calculadora
 
