@@ -8,8 +8,8 @@ Este proyecto es una **calculadora interactiva** construida con **React**. Permi
 
 Para correr el proyecto necesitas tener instalados los siguientes programas:
 
-- **Node.js** (versión 14 o superior)
-- **npm** (viene incluido con Node.js)
+- **Node.js**
+- **npm**
 
 ### Instalación
 
