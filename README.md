@@ -15,7 +15,7 @@ Para correr el proyecto necesitas tener instalados los siguientes programas:
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/Avertcoiin/Ej_React_DSM_AVertiz.git
+   git clone [https://github.com/Avertcoiin/Ej_React_DSM_AVertiz.git](https://github.com/Avertcoiin/Ej_React_DSM_AVertiz.git)
    
 2. Navega al directorio del proyecto:
    ```bash
