@@ -24,11 +24,12 @@ Para correr el proyecto necesitas tener instalados los siguientes programas:
 3. Instala las dependencias:
   ```bash
   npm install
+ ´´´ 
 
 ### Ejecutar el proyecto
   ```bash
   npm run dev
-`\`\`\`
+  ´´´ 
 
 ### Uso de la calculadora
 
